@@ -1,9 +1,9 @@
-package com.zsoft.SignalA;
+package com.zsoft.signala;
 
 import org.json.JSONObject;
 
-import com.zsoft.SignalA.Transport.ITransport;
-import com.zsoft.SignalA.Transport.StateBase;
+import com.zsoft.signala.transport.ITransport;
+import com.zsoft.signala.transport.StateBase;
 
 import android.content.Context;
 
@@ -101,8 +101,10 @@ public abstract class ConnectionBase {
 	}
 	
 	public boolean VerifyProtocolVersion(String protocolVersion) {
-		return protocolVersion.compareTo("1.2") == 0;
+		return protocolVersion.compareTo(getProtocolVersion()) == 0;
 	}
+
+    public String getProtocolVersion() { return "1.3"; }
 
 	public String getMessageId() {
 		return mMessageId;

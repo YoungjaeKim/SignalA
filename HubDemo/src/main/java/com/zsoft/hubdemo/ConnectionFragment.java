@@ -22,7 +22,7 @@ public class ConnectionFragment extends Fragment {
 	    
 	    mAddressTextBox = (EditText) view.findViewById(R.id.address);
 	    mAddressTextBox.setText("http://signalrcalc.apphb.com");
-//	    mAddressTextBox.setText("http://10.0.2.2:8888");
+	    //mAddressTextBox.setText("http://192.168.1.70:8080");
 	    Button button = (Button) view.findViewById(R.id.btnConnect);
 	    button.setOnClickListener(new View.OnClickListener() {
 	      @Override
